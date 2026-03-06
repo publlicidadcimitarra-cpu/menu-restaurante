@@ -1,57 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Menú Digital</title>
+
+<title>Menú</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
 body{
-background:#000;
-color:white;
-font-family:Arial;
 margin:0;
-text-align:center;
+font-family:Arial;
+background:black;
+color:white;
 }
 
+/* LOGO */
+
 header{
-padding:30px 20px;
+text-align:center;
+padding:30px;
 }
 
 header img{
-width:180px;
-margin-bottom:15px;
+width:200px;
 }
 
-h1{
-margin:5px;
+/* MENU FLOTANTE */
+
+.menu-flotante{
+position:sticky;
+top:0;
+background:#000;
+display:flex;
+overflow-x:auto;
+border-bottom:2px solid #222;
+z-index:1000;
 }
 
-.menu{
+.menu-flotante a{
+padding:12px 18px;
+color:white;
+text-decoration:none;
+white-space:nowrap;
+font-size:14px;
+}
+
+.menu-flotante a:hover{
+background:#111;
+}
+
+/* SECCIONES */
+
+section{
+max-width:900px;
+margin:auto;
 padding:20px;
 }
 
-.seccion{
+h2{
+border-bottom:2px solid #333;
+padding-bottom:6px;
 margin-top:40px;
 }
 
+/* ITEMS */
+
 .item{
-background:#111;
-margin:10px auto;
-padding:15px;
-border-radius:10px;
-max-width:500px;
 display:flex;
 justify-content:space-between;
-align-items:center;
-}
-
-.item i{
-margin-right:10px;
-color:#f5b301;
+background:#111;
+margin:8px 0;
+padding:12px;
+border-radius:8px;
 }
 
 .precio{
@@ -59,30 +83,22 @@ color:#00ff9c;
 font-weight:bold;
 }
 
-.boton{
-display:inline-block;
-margin-top:8px;
-background:#25D366;
-padding:8px 15px;
-border-radius:20px;
-color:white;
-text-decoration:none;
-font-size:14px;
-}
+/* RESPONSIVE */
 
-.qr{
-margin-top:40px;
-}
+@media (max-width:600px){
 
-.qr img{
+header img{
 width:150px;
 }
 
-footer{
-margin-top:40px;
-padding:20px;
-color:#aaa;
-font-size:14px;
+.item{
+flex-direction:column;
+}
+
+.precio{
+margin-top:5px;
+}
+
 }
 
 </style>
@@ -93,103 +109,178 @@ font-size:14px;
 
 <header>
 
-<img src="logo.png" alt="logo">
+<img src="logo.png">
 
-<h1>MENÚ DIGITAL</h1>
+<h1>MENÚ</h1>
 
 </header>
 
 
-<div class="menu">
+<!-- MENU FLOTANTE -->
 
+<div class="menu-flotante">
 
-<div class="seccion">
-<h2>⭐ Más Vendidos</h2>
+<a href="#frutas">🍓 Frutas</a>
+<a href="#antojitos">🍭 Antojos</a>
+<a href="#bebidas">🥤 Bebidas</a>
+<a href="#cocteles">🍹 Cócteles</a>
+<a href="#hamburguesas">🍔 Hamburguesas</a>
+<a href="#perros">🌭 Perros</a>
+<a href="#papas">🍟 Papas</a>
+<a href="#mazorcadas">🌽 Mazorcadas</a>
+<a href="#parrilla">🥩 Parrilla</a>
+<a href="#burritos">🌯 Burritos</a>
 
-<div class="item">
-<span><i class="fa-solid fa-burger"></i>Hamburguesa Especial</span>
-<span class="precio">$15.000</span>
 </div>
 
-<a class="boton" href="https://wa.me/573000000000?text=Quiero%20una%20Hamburguesa%20Especial">
-Pedir por WhatsApp
-</a>
 
-</div>
+<!-- FRUTAS -->
+
+<section id="frutas">
+
+<h2>🍓 Frutas Especiales</h2>
+
+<div class="item"><span>La Bandida – Manzana roja, fresa, uva, cereza, mermelada frutos rojos, dulces y gomitas</span><span class="precio">$8.500</span></div>
+
+<div class="item"><span>La Suegra – Mango, manzana verde, kiwi, dulces y gomitas</span><span class="precio">$8.500</span></div>
+
+<div class="item"><span>La Golosa – Mango, piña, mermelada de maracuyá, dulces y gomitas</span><span class="precio">$8.500</span></div>
+
+<div class="item"><span>La Tamarindo – Mango, banderilla de tamarindo, chamoy y tajín</span><span class="precio">$10.000</span></div>
+
+<div class="item"><span>La Mexicana – Mango, piña, Doritos picantes, chamoy y tajín</span><span class="precio">$10.000</span></div>
+
+<div class="item"><span>La Blue Berry – 3 frutas a elección + gomitas</span><span class="precio">$9.500</span></div>
+
+<div class="item"><span>La Choclito – Mango, choclitos, kipitos</span><span class="precio">$9.500</span></div>
+
+<div class="item"><span>La Manco Mamón – Mango, mamoncillo, limón y sal</span><span class="precio">$9.500</span></div>
+
+<div class="item"><span>La Creída – Solo mango</span><span class="precio">$8.500</span></div>
+
+<div class="item"><span>La Clásica – Sal, limón y hielo</span><span class="precio">$5.500</span></div>
+
+</section>
 
 
-<div class="seccion">
+<!-- HAMBURGUESAS -->
+
+<section id="hamburguesas">
 
 <h2>🍔 Hamburguesas</h2>
 
-<div class="item">
-<span><i class="fa-solid fa-burger"></i>Hamburguesa Clásica</span>
-<span class="precio">$10.000</span>
-</div>
+<div class="item"><span>Ternerita</span><span class="precio">$16.000</span></div>
 
-<div class="item">
-<span><i class="fa-solid fa-burger"></i>Hamburguesa Doble Carne</span>
-<span class="precio">$13.000</span>
-</div>
+<div class="item"><span>La Cuernuda</span><span class="precio">$20.000</span></div>
 
-<div class="item">
-<span><i class="fa-solid fa-burger"></i>Hamburguesa Especial</span>
-<span class="precio">$15.000</span>
-</div>
+<div class="item"><span>La Toro Us</span><span class="precio">$22.000</span></div>
 
-</div>
+<div class="item"><span>La Embestida</span><span class="precio">$21.000</span></div>
 
+<div class="item"><span>La Furiosa</span><span class="precio">$24.000</span></div>
 
-<div class="seccion">
+<div class="item"><span>Golden Torous</span><span class="precio">$25.000</span></div>
 
-<h2>🍟 Acompañamientos</h2>
+<div class="item"><span>Golosa Rellena</span><span class="precio">$27.000</span></div>
 
-<div class="item">
-<span><i class="fa-solid fa-french-fries"></i>Papas a la Francesa</span>
-<span class="precio">$6.000</span>
-</div>
+<div class="item"><span>La del Rancho</span><span class="precio">$27.000</span></div>
 
-<div class="item">
-<span><i class="fa-solid fa-hotdog"></i>Salchipapas</span>
-<span class="precio">$8.000</span>
-</div>
+<div class="item"><span>La Arrecha</span><span class="precio">$26.000</span></div>
 
-</div>
+<div class="item"><span>La Vaquera</span><span class="precio">$23.000</span></div>
+
+<div class="item"><span>La Rompe Dieta</span><span class="precio">$32.000</span></div>
+
+<div class="item"><span>Paso Fino</span><span class="precio">$28.000</span></div>
+
+</section>
 
 
-<div class="seccion">
+<!-- PERROS -->
 
-<h2>🍹 Micheladas</h2>
+<section id="perros">
 
-<div class="item">
-<span><i class="fa-solid fa-beer-mug-empty"></i>Michelada Clásica</span>
-<span class="precio">$9.000</span>
-</div>
+<h2>🌭 Perros</h2>
 
-<div class="item">
-<span><i class="fa-solid fa-beer-mug-empty"></i>Michelada Especial</span>
-<span class="precio">$12.000</span>
-</div>
+<div class="item"><span>Berraquito</span><span class="precio">$15.000</span></div>
 
-</div>
+<div class="item"><span>El Indomable</span><span class="precio">$18.000</span></div>
 
+<div class="item"><span>El Ladrador</span><span class="precio">$18.000</span></div>
 
-<div class="qr">
+<div class="item"><span>Furioso</span><span class="precio">$19.000</span></div>
 
-<h3>📷 Escanea el menú</h3>
+<div class="item"><span>Torous Pitbull</span><span class="precio">$19.000</span></div>
 
-<img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://tuusuario.github.io/menu">
-
-</div>
-
-</div>
+</section>
 
 
-<footer>
+<!-- PAPAS -->
 
-Menú digital
+<section id="papas">
 
-</footer>
+<h2>🍟 Papas Torous</h2>
+
+<div class="item"><span>El Torito</span><span class="precio">$25.000</span></div>
+
+<div class="item"><span>La Montañera</span><span class="precio">$29.000</span></div>
+
+<div class="item"><span>La Berracona</span><span class="precio">$38.000</span></div>
+
+<div class="item"><span>La Indomable</span><span class="precio">$43.000</span></div>
+
+</section>
+
+
+<!-- MAZORCADAS -->
+
+<section id="mazorcadas">
+
+<h2>🌽 Mazorcadas</h2>
+
+<div class="item"><span>La Cojita</span><span class="precio">$25.000</span></div>
+
+<div class="item"><span>La Buchona</span><span class="precio">$28.000</span></div>
+
+<div class="item"><span>La Arrecha</span><span class="precio">$29.000</span></div>
+
+</section>
+
+
+<!-- PARRILLA -->
+
+<section id="parrilla">
+
+<h2>🥩 Parrilla Torous</h2>
+
+<div class="item"><span>Pechuga 350g</span><span class="precio">$28.000</span></div>
+
+<div class="item"><span>Pechuga gratinada</span><span class="precio">$30.000</span></div>
+
+<div class="item"><span>Churrasco</span><span class="precio">$29.000</span></div>
+
+<div class="item"><span>Punta Bianca</span><span class="precio">$30.000</span></div>
+
+<div class="item"><span>Lomo de cerdo</span><span class="precio">$25.000</span></div>
+
+<div class="item"><span>Costillas BBQ</span><span class="precio">$30.000</span></div>
+
+</section>
+
+
+<!-- BURRITOS -->
+
+<section id="burritos">
+
+<h2>🌯 Burritos</h2>
+
+<div class="item"><span>El Vaquero</span><span class="precio">$16.000</span></div>
+
+<div class="item"><span>El del Buey</span><span class="precio">$16.000</span></div>
+
+<div class="item"><span>El Macho Torous</span><span class="precio">$19.000</span></div>
+
+</section>
 
 </body>
 </html>
