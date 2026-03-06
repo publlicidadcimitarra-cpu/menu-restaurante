@@ -1,214 +1,195 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Menú Torous</title>
+<title>Menú Digital</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
 body{
-margin:0;
-background:black;
+background:#000;
 color:white;
 font-family:Arial;
-}
-
-.logo{
+margin:0;
 text-align:center;
-padding:30px;
 }
 
-.logo img{
-width:200px;
-max-width:80%;
+header{
+padding:30px 20px;
+}
+
+header img{
+width:180px;
+margin-bottom:15px;
+}
+
+h1{
+margin:5px;
 }
 
 .menu{
-max-width:900px;
-margin:auto;
 padding:20px;
 }
 
-h2{
-border-bottom:2px solid #444;
-padding-bottom:10px;
+.seccion{
 margin-top:40px;
-color:#ffcc00;
 }
 
 .item{
+background:#111;
+margin:10px auto;
+padding:15px;
+border-radius:10px;
+max-width:500px;
 display:flex;
 justify-content:space-between;
-padding:12px 0;
-border-bottom:1px solid #333;
-flex-wrap:wrap;
+align-items:center;
 }
 
-.nombre{
-font-weight:bold;
-}
-
-.desc{
-width:100%;
-font-size:14px;
-color:#bbb;
-margin-top:4px;
+.item i{
+margin-right:10px;
+color:#f5b301;
 }
 
 .precio{
-color:#ffcc00;
+color:#00ff9c;
 font-weight:bold;
 }
 
-@media(max-width:600px){
-.logo img{
+.boton{
+display:inline-block;
+margin-top:8px;
+background:#25D366;
+padding:8px 15px;
+border-radius:20px;
+color:white;
+text-decoration:none;
+font-size:14px;
+}
+
+.qr{
+margin-top:40px;
+}
+
+.qr img{
 width:150px;
 }
+
+footer{
+margin-top:40px;
+padding:20px;
+color:#aaa;
+font-size:14px;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<div class="logo">
-<img src="logo.png">
-</div>
+<header>
+
+<img src="logo.png" alt="logo">
+
+<h1>MENÚ DIGITAL</h1>
+
+</header>
+
 
 <div class="menu">
 
-<h2><i class="fas fa-utensils"></i> Entradas</h2>
+
+<div class="seccion">
+<h2>⭐ Más Vendidos</h2>
 
 <div class="item">
-<div>
-<div class="nombre">Platanitos</div>
-<div class="desc">Chips de plátano con suero costeño</div>
+<span><i class="fa-solid fa-burger"></i>Hamburguesa Especial</span>
+<span class="precio">$15.000</span>
 </div>
-<div class="precio">$8.000</div>
+
+<a class="boton" href="https://wa.me/573000000000?text=Quiero%20una%20Hamburguesa%20Especial">
+Pedir por WhatsApp
+</a>
+
+</div>
+
+
+<div class="seccion">
+
+<h2>🍔 Hamburguesas</h2>
+
+<div class="item">
+<span><i class="fa-solid fa-burger"></i>Hamburguesa Clásica</span>
+<span class="precio">$10.000</span>
 </div>
 
 <div class="item">
-<div>
-<div class="nombre">Papitas Torous</div>
-<div class="desc">Papa francesa, queso cheddar, tocineta</div>
-</div>
-<div class="precio">$10.000</div>
+<span><i class="fa-solid fa-burger"></i>Hamburguesa Doble Carne</span>
+<span class="precio">$13.000</span>
 </div>
 
 <div class="item">
-<div>
-<div class="nombre">La Chory</div>
-<div class="desc">Chorizo asado con papa francesa</div>
+<span><i class="fa-solid fa-burger"></i>Hamburguesa Especial</span>
+<span class="precio">$15.000</span>
 </div>
-<div class="precio">$10.000</div>
+
+</div>
+
+
+<div class="seccion">
+
+<h2>🍟 Acompañamientos</h2>
+
+<div class="item">
+<span><i class="fa-solid fa-french-fries"></i>Papas a la Francesa</span>
+<span class="precio">$6.000</span>
 </div>
 
 <div class="item">
-<div>
-<div class="nombre">La Puerquita</div>
-<div class="desc">Chicharrón, limón y papa criolla</div>
-</div>
-<div class="precio">$10.000</div>
+<span><i class="fa-solid fa-hotdog"></i>Salchipapas</span>
+<span class="precio">$8.000</span>
 </div>
 
-
-<h2><i class="fas fa-hamburger"></i> Hamburguesas</h2>
-
-<div class="item"><div><div class="nombre">Ternerita</div><div class="desc">Pan, carne jugosa de res, queso mozzarella, cebolla caramelizada, vegetales frescos y papa francesa</div></div><div class="precio">$16.000</div></div>
-
-<div class="item"><div><div class="nombre">La Cuernuda</div><div class="desc">Pan, carne jugosa de res, pollo entartado, queso mozzarella, tocineta, cebolla caramelizada, vegetales frescos y papa francesa</div></div><div class="precio">$20.000</div></div>
-
-<div class="item"><div><div class="nombre">La Toro Us</div><div class="desc">Pan, carne jugosa de res, triple tocineta, queso crema, cebolla crispy, vegetales frescos y papa criolla</div></div><div class="precio">$22.000</div></div>
-
-<div class="item"><div><div class="nombre">La Embestida</div><div class="desc">Pan, carne jugosa de res, pechuga con chimichurri, aros de cebolla apanados, papa criolla y vegetales frescos</div></div><div class="precio">$21.000</div></div>
-
-<div class="item"><div><div class="nombre">La Furiosa</div><div class="desc">Pan, carne jugosa de res, queso cheddar, chorizo, aguacate, cebolla crispy, vegetales frescos y papa francesa</div></div><div class="precio">$24.000</div></div>
-
-<div class="item"><div><div class="nombre">Golden Torous</div><div class="desc">Pan, carne jugosa de res, brisket ahumado, tocineta caramelizada, queso cheddar, cebolla crispy, vegetales frescos y papa criolla</div></div><div class="precio">$25.000</div></div>
-
-<div class="item"><div><div class="nombre">Golosa Rellena</div><div class="desc">Pan, carne jugosa de res, queso cheddar, queso mozzarella, aros de cebolla, tocineta, vegetales frescos y papa francesa</div></div><div class="precio">$27.000</div></div>
-
-<div class="item"><div><div class="nombre">La del Rancho</div><div class="desc">Pan, doble carne de res, doble queso cheddar, costillas BBQ, cebolla caramelizada, papa francesa y vegetales frescos</div></div><div class="precio">$27.000</div></div>
-
-<div class="item"><div><div class="nombre">La Arrecha</div><div class="desc">Pan, carne jugosa de res, carne desmechada, guacamole picante, queso mozzarella, cebolla crispy, papa criolla y vegetales frescos</div></div><div class="precio">$26.000</div></div>
-
-<div class="item"><div><div class="nombre">La Vaquera</div><div class="desc">Pan, carne jugosa de res, tocineta caramelizada, triple queso gratinado, cebolla caramelizada, papa criolla y vegetales frescos</div></div><div class="precio">$23.000</div></div>
-
-<div class="item"><div><div class="nombre">La Rompe Dieta</div><div class="desc">Triple carne de res, triple queso mozzarella, doble pechuga asada en chimichurri, cebolla crispy, papa francesa y vegetales frescos</div></div><div class="precio">$32.000</div></div>
-
-<div class="item"><div><div class="nombre">Paso Fino</div><div class="desc">Doble carne de res jugosa, chorizo caramelizado, queso costeño frito, aros de cebolla, papa francesa y vegetales frescos</div></div><div class="precio">$28.000</div></div>
+</div>
 
 
-<h2><i class="fas fa-hotdog"></i> Perros</h2>
+<div class="seccion">
 
-<div class="item"><div class="nombre">Berraquito</div><div class="precio">$15.000</div></div>
-<div class="item"><div class="nombre">El Indomable</div><div class="precio">$18.000</div></div>
-<div class="item"><div class="nombre">El Ladrador</div><div class="precio">$18.000</div></div>
-<div class="item"><div class="nombre">Furioso</div><div class="precio">$19.000</div></div>
-<div class="item"><div class="nombre">Torous Pitbull</div><div class="precio">$19.000</div></div>
+<h2>🍹 Micheladas</h2>
 
+<div class="item">
+<span><i class="fa-solid fa-beer-mug-empty"></i>Michelada Clásica</span>
+<span class="precio">$9.000</span>
+</div>
 
-<h2><i class="fas fa-french-fries"></i> Papas Torous</h2>
-
-<div class="item"><div class="nombre">El Torito</div><div class="precio">$25.000</div></div>
-<div class="item"><div class="nombre">La Montañera</div><div class="precio">$29.000</div></div>
-<div class="item"><div class="nombre">La Berracona</div><div class="precio">$38.000</div></div>
-<div class="item"><div class="nombre">La Indomable</div><div class="precio">$43.000</div></div>
-
-
-<h2><i class="fas fa-corn"></i> Mazorcadas</h2>
-
-<div class="item"><div class="nombre">La Cojita</div><div class="precio">$25.000</div></div>
-<div class="item"><div class="nombre">La Buchona</div><div class="precio">$28.000</div></div>
-<div class="item"><div class="nombre">La Arrecha</div><div class="precio">$29.000</div></div>
-
-
-<h2><i class="fas fa-drumstick-bite"></i> Parrilla Torous</h2>
-
-<div class="item"><div class="nombre">Pechuga 350gr</div><div class="precio">$28.000</div></div>
-<div class="item"><div class="nombre">Pechuga gratinada 350gr</div><div class="precio">$30.000</div></div>
-<div class="item"><div class="nombre">Churrasco 350gr</div><div class="precio">$29.000</div></div>
-<div class="item"><div class="nombre">Punta Bianca 350gr</div><div class="precio">$30.000</div></div>
-<div class="item"><div class="nombre">Lomo de cerdo 350gr</div><div class="precio">$25.000</div></div>
-<div class="item"><div class="nombre">Costillas BBQ 350gr</div><div class="precio">$30.000</div></div>
-
-
-<h2><i class="fas fa-users"></i> Picadas</h2>
-
-<div class="item"><div class="nombre">La Arriera</div><div class="precio">$30.000</div></div>
-<div class="item"><div class="nombre">La Herradura</div><div class="precio">$45.000</div></div>
-<div class="item"><div class="nombre">La Trompuda</div><div class="precio">$60.000</div></div>
-
-
-<h2><i class="fas fa-burrito"></i> Burritos</h2>
-
-<div class="item"><div class="nombre">El Vaquero</div><div class="precio">$16.000</div></div>
-<div class="item"><div class="nombre">El del Buey</div><div class="precio">$16.000</div></div>
-<div class="item"><div class="nombre">El Macho Torous</div><div class="precio">$19.000</div></div>
-
-
-<h2><i class="fas fa-glass-water"></i> Bebidas</h2>
-
-<div class="item"><div class="nombre">Coca Cola</div><div class="precio">$5.000</div></div>
-<div class="item"><div class="nombre">Cuatro</div><div class="precio">$4.000</div></div>
-<div class="item"><div class="nombre">Ginger</div><div class="precio">$4.000</div></div>
-<div class="item"><div class="nombre">Manzana</div><div class="precio">$4.000</div></div>
-<div class="item"><div class="nombre">Cola Roja</div><div class="precio">$4.000</div></div>
-<div class="item"><div class="nombre">Uva</div><div class="precio">$4.000</div></div>
-<div class="item"><div class="nombre">Naranja</div><div class="precio">$4.000</div></div>
-<div class="item"><div class="nombre">Limón</div><div class="precio">$4.000</div></div>
-<div class="item"><div class="nombre">Piña</div><div class="precio">$4.000</div></div>
-<div class="item"><div class="nombre">Soda</div><div class="precio">$4.000</div></div>
-<div class="item"><div class="nombre">Colombiana</div><div class="precio">$4.000</div></div>
-<div class="item"><div class="nombre">Jugo Hit</div><div class="precio">$4.000</div></div>
-<div class="item"><div class="nombre">Gatorade</div><div class="precio">$5.000</div></div>
+<div class="item">
+<span><i class="fa-solid fa-beer-mug-empty"></i>Michelada Especial</span>
+<span class="precio">$12.000</span>
+</div>
 
 </div>
+
+
+<div class="qr">
+
+<h3>📷 Escanea el menú</h3>
+
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://tuusuario.github.io/menu">
+
+</div>
+
+</div>
+
+
+<footer>
+
+Menú digital
+
+</footer>
 
 </body>
 </html>
-```
