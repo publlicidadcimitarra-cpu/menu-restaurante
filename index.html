@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -13,7 +15,7 @@
 body{
 margin:0;
 font-family:Arial;
-background:black;
+background:#000;
 color:white;
 }
 
@@ -23,28 +25,29 @@ padding:30px;
 }
 
 header img{
-width:200px;
+width:220px;
 }
 
 nav{
 position:sticky;
 top:0;
 background:#111;
-padding:10px;
+padding:12px;
 overflow-x:auto;
 white-space:nowrap;
 z-index:1000;
+box-shadow:0 3px 10px rgba(0,0,0,0.5);
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin:10px;
+margin:12px;
 font-size:14px;
 }
 
 section{
-padding:20px;
+padding:25px;
 max-width:900px;
 margin:auto;
 }
@@ -52,14 +55,16 @@ margin:auto;
 h2{
 border-bottom:2px solid #333;
 padding-bottom:10px;
+margin-top:40px;
 }
 
 .menu-item{
 background:#111;
-margin:10px 0;
-border-radius:8px;
+margin:12px 0;
+border-radius:10px;
 cursor:pointer;
-padding:15px;
+padding:16px;
+transition:0.2s;
 }
 
 .menu-item:hover{
@@ -69,17 +74,26 @@ background:#1b1b1b;
 .title{
 display:flex;
 justify-content:space-between;
+font-size:16px;
 }
 
 .desc{
 display:none;
 margin-top:10px;
 color:#ccc;
+font-size:14px;
 }
 
 .price{
 color:#00ff9c;
 font-weight:bold;
+}
+
+footer{
+text-align:center;
+padding:40px;
+color:#666;
+font-size:12px;
 }
 
 </style>
@@ -103,7 +117,7 @@ font-weight:bold;
 <a href="#limonadas">🍋 Limonadas</a>
 <a href="#jugos">🧃 Jugos</a>
 <a href="#shots">🥃 Shots</a>
-<a href="#antojitos">🍍 Antojos</a>
+<a href="#antojitos">🍍 Antojitos</a>
 <a href="#hamburguesas">🍔 Hamburguesas</a>
 <a href="#perros">🌭 Perros</a>
 <a href="#papas">🍟 Papas Torous</a>
@@ -113,6 +127,9 @@ font-weight:bold;
 <a href="#burritos">🌯 Burritos</a>
 
 </nav>
+
+
+<!-- MICHELADAS -->
 
 <section id="micheladas">
 
@@ -220,21 +237,62 @@ Sal, limón y hielo
 
 </section>
 
+
+<!-- AQUI SIGUE TODO EL MENU DEL ARCHIVO -->
+
+<section id="hamburguesas">
+<h2>🍔 Hamburguesas</h2>
+
+<div class="menu-item">
+<div class="title">
+<span>Ternerita</span>
+<span class="price">$16.000</span>
+</div>
+<div class="desc">
+Pan, carne jugosa de res, queso mozzarella, cebolla caramelizada,
+vegetales frescos y papa francesa
+</div>
+</div>
+
+<div class="menu-item">
+<div class="title">
+<span>La cuernuda</span>
+<span class="price">$20.000</span>
+</div>
+<div class="desc">
+Pan, carne jugosa de res, pollo entartado, queso mozzarella,
+tocineta, cebolla caramelizada, vegetales frescos y papa francesa
+</div>
+</div>
+
+</section>
+
+
+<footer>
+Menú Digital
+</footer>
+
+
 <script>
 
 document.querySelectorAll(".menu-item").forEach(item=>{
+
 item.addEventListener("click",()=>{
+
 let desc=item.querySelector(".desc");
 
 if(desc){
+
 desc.style.display=
 desc.style.display==="block"?"none":"block";
+
 }
+
 });
+
 });
 
 </script>
 
 </body>
-
 </html>
