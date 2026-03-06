@@ -1,79 +1,128 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Menú - Cimitarra Torous</title>
+<title>Torous Food & Drinks</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
 body{
-background:#000;
-color:#fff;
-font-family:Arial, Helvetica, sans-serif;
 margin:0;
+background:#000;
+color:white;
+font-family:Arial;
+}
+
+header{
+text-align:center;
+padding:30px 10px;
+}
+
+.logo{
+width:90%;
+max-width:420px;
+}
+
+nav{
+position:sticky;
+top:0;
+background:#111;
+padding:10px;
+display:flex;
+justify-content:center;
+gap:20px;
+z-index:999;
+}
+
+nav a{
+color:#f5b800;
+text-decoration:none;
+font-weight:bold;
+font-size:14px;
+}
+
+nav a:hover{
+color:white;
 }
 
 .container{
-width:90%;
-max-width:900px;
+max-width:1100px;
 margin:auto;
 padding:20px;
 }
 
-/* LOGO */
-
-.logo{
-text-align:center;
-margin-top:30px;
-}
-
-.logo img{
-width:100%;
-max-width:450px;
-height:auto;
-}
-
-/* TITULOS */
-
 h2{
-color:#f1c40f;
-border-bottom:1px solid #444;
-padding-bottom:6px;
+color:#f5b800;
 margin-top:40px;
+border-bottom:2px solid #222;
+padding-bottom:10px;
 }
 
-/* ITEMS */
-
-.item{
-display:flex;
-justify-content:space-between;
-margin-top:12px;
-font-size:18px;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+margin-top:20px;
 }
 
-.price{
-color:#2ecc71;
+.card{
+background:#111;
+padding:18px;
+border-radius:12px;
+transition:0.3s;
+border:1px solid #222;
+}
+
+.card:hover{
+transform:scale(1.05);
+border:1px solid #f5b800;
+}
+
+.nombre{
+font-size:19px;
 font-weight:bold;
 }
 
 .desc{
-font-size:14px;
 color:#bbb;
-margin-bottom:8px;
+font-size:14px;
+margin-top:6px;
 }
 
-/* RESPONSIVE */
-
-@media (max-width:600px){
-
-.item{
-font-size:16px;
+.precio{
+color:#00ff9c;
+font-size:18px;
+margin-top:10px;
+font-weight:bold;
 }
 
-h2{
-font-size:20px;
+.icon{
+margin-right:8px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+font-size:28px;
+padding:15px;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+
+@media(max-width:600px){
+
+nav{
+flex-wrap:wrap;
+font-size:12px;
 }
 
 }
@@ -84,70 +133,154 @@ font-size:20px;
 
 <body>
 
+<header>
+
+<img src="logo.png" class="logo">
+
+</header>
+
+
+<nav>
+
+<a href="#entradas">Entradas</a>
+<a href="#burgers">Hamburguesas</a>
+<a href="#perros">Perros</a>
+<a href="#papas">Papas</a>
+<a href="#mazorcadas">Mazorcadas</a>
+<a href="#bebidas">Bebidas</a>
+
+</nav>
+
+
 <div class="container">
 
-<div class="logo">
-<img src="logo.png" alt="Cimitarra Torous">
+
+<h2 id="entradas"><i class="fa-solid fa-bowl-food icon"></i>Entradas</h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="nombre">Platanitos</div>
+<div class="desc">Chips de plátano con suero costeño</div>
+<div class="precio">$8.000</div>
 </div>
 
-<h2>MICHELADAS</h2>
+<div class="card">
+<div class="nombre">Papitas Torous</div>
+<div class="desc">Papa francesa, queso cheddar y tocineta</div>
+<div class="precio">$10.000</div>
+</div>
 
-<div class="item"><span>La Bandida</span><span class="price">$8.500</span></div>
-<div class="desc">Manzana roja, fresa, uva, cereza, mermelada frutos rojos, dulces y gomitas</div>
+<div class="card">
+<div class="nombre">La Chory</div>
+<div class="desc">Chorizo asado con papa francesa</div>
+<div class="precio">$10.000</div>
+</div>
 
-<div class="item"><span>La Suegra</span><span class="price">$8.500</span></div>
-<div class="desc">Mango, manzana verde, kiwi, dulces y gomitas</div>
-
-<div class="item"><span>La Golosa</span><span class="price">$8.500</span></div>
-<div class="desc">Mango, piña, mermelada de maracuyá</div>
-
-<div class="item"><span>La Tamarindo</span><span class="price">$10.000</span></div>
-<div class="desc">Mango, banderilla de tamarindo, chamoy y tajín</div>
-
-<div class="item"><span>La Mexicana</span><span class="price">$10.000</span></div>
-<div class="desc">Mango, piña, doritos picantes, chamoy y tajín</div>
-
-<div class="item"><span>La Blue Berry</span><span class="price">$9.500</span></div>
-<div class="desc">3 frutas a elección con toppings dulces</div>
-
-<div class="item"><span>La Choclito</span><span class="price">$9.500</span></div>
-<div class="desc">Mango, choclitos, kipitos</div>
-
-<div class="item"><span>La Creída</span><span class="price">$8.500</span></div>
-<div class="desc">Solo mango con toppings dulces</div>
-
-<div class="item"><span>La Clásica</span><span class="price">$5.500</span></div>
-<div class="desc">Sal, limón y hielo</div>
-
-<h2>BEBIDAS</h2>
-
-<div class="item"><span>Poker</span><span class="price">$3.500</span></div>
-<div class="item"><span>Pilsen</span><span class="price">$4.500</span></div>
-<div class="item"><span>Águila</span><span class="price">$3.500</span></div>
-<div class="item"><span>Costeña</span><span class="price">$3.500</span></div>
-<div class="item"><span>Budweiser</span><span class="price">$4.000</span></div>
-<div class="item"><span>Coronita</span><span class="price">$4.500</span></div>
-<div class="item"><span>Club Colombia</span><span class="price">$5.000</span></div>
-<div class="item"><span>Red's</span><span class="price">$7.000</span></div>
-<div class="item"><span>Smirnoff</span><span class="price">$13.000</span></div>
-<div class="item"><span>Coca-Cola</span><span class="price">$4.000</span></div>
-<div class="item"><span>Agua</span><span class="price">$2.500</span></div>
-
-<h2>MOJITOS</h2>
-
-<div class="item"><span>Mojito Maracuyá</span><span class="price">$22.000</span></div>
-<div class="item"><span>Mojito Kiwi</span><span class="price">$22.000</span></div>
-<div class="item"><span>Mojito Fresa</span><span class="price">$22.000</span></div>
-<div class="item"><span>Mojito Hierbabuena</span><span class="price">$22.000</span></div>
-
-<h2>LIMONADAS</h2>
-
-<div class="item"><span>Limonada Soda</span><span class="price">$9.000</span></div>
-<div class="item"><span>Limonada Cereza</span><span class="price">$10.000</span></div>
-<div class="item"><span>Limonada Coco</span><span class="price">$10.000</span></div>
-<div class="item"><span>Limonada Hierbabuena</span><span class="price">$10.000</span></div>
+<div class="card">
+<div class="nombre">La Puerquita</div>
+<div class="desc">Chicharrón con limón y papa criolla</div>
+<div class="precio">$10.000</div>
+</div>
 
 </div>
+
+
+
+<h2 id="burgers"><i class="fa-solid fa-burger icon"></i>Hamburguesas</h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="nombre">Ternerita</div>
+<div class="desc">Carne de res, mozzarella, cebolla caramelizada, vegetales frescos</div>
+<div class="precio">$16.000</div>
+</div>
+
+<div class="card">
+<div class="nombre">La Cuernuda</div>
+<div class="desc">Carne de res, pollo entartado, mozzarella y tocineta</div>
+<div class="precio">$20.000</div>
+</div>
+
+<div class="card">
+<div class="nombre">La Toro Us</div>
+<div class="desc">Carne de res, triple tocineta, queso crema y cebolla crispy</div>
+<div class="precio">$22.000</div>
+</div>
+
+<div class="card">
+<div class="nombre">La Furiosa</div>
+<div class="desc">Carne de res, chorizo, cheddar y aguacate</div>
+<div class="precio">$24.000</div>
+</div>
+
+<div class="card">
+<div class="nombre">La Rompe Dieta</div>
+<div class="desc">Triple carne, triple queso, doble pechuga</div>
+<div class="precio">$32.000</div>
+</div>
+
+</div>
+
+
+
+<h2 id="perros"><i class="fa-solid fa-hotdog icon"></i>Perros</h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="nombre">Berraquito</div>
+<div class="desc">Salchicha americana, queso gratinado y cebolla crispy</div>
+<div class="precio">$15.000</div>
+</div>
+
+<div class="card">
+<div class="nombre">El Indomable</div>
+<div class="desc">Salchicha americana con pollo entartado</div>
+<div class="precio">$18.000</div>
+</div>
+
+<div class="card">
+<div class="nombre">Furioso</div>
+<div class="desc">Carne desmechada, guacamole y queso gratinado</div>
+<div class="precio">$19.000</div>
+</div>
+
+</div>
+
+
+
+<h2 id="bebidas"><i class="fa-solid fa-glass-water icon"></i>Bebidas</h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="nombre">Gaseosas</div>
+<div class="desc">Postobón, Coca-Cola, Colombiana, Uva, Manzana</div>
+<div class="precio">$4.000</div>
+</div>
+
+<div class="card">
+<div class="nombre">Coca-Cola</div>
+<div class="precio">$5.000</div>
+</div>
+
+<div class="card">
+<div class="nombre">Gatorade</div>
+<div class="precio">$5.000</div>
+</div>
+
+</div>
+
+
+</div>
+
+
+<a class="whatsapp" href="https://wa.me/57XXXXXXXXXX" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
 
 </body>
 </html>
