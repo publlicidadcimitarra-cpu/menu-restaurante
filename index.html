@@ -17,109 +17,69 @@ background:black;
 color:white;
 }
 
-/* LOGO */
-
-.logo{
+header{
 text-align:center;
-padding:20px;
+padding:30px;
 }
 
-.logo img{
-max-width:200px;
+header img{
+width:200px;
 }
 
-/* MENU FLOTANTE */
-
-.menu-nav{
+nav{
 position:sticky;
 top:0;
 background:#111;
-display:flex;
-justify-content:center;
-gap:15px;
 padding:10px;
+overflow-x:auto;
+white-space:nowrap;
 z-index:1000;
-border-bottom:1px solid #333;
 }
 
-.menu-nav a{
+nav a{
 color:white;
 text-decoration:none;
-padding:8px 14px;
-border-radius:20px;
-background:#222;
+margin:10px;
 font-size:14px;
 }
 
-.menu-nav a:hover{
-background:#ff9900;
-}
-
-/* SECCIONES */
-
-.section{
+section{
 padding:20px;
+max-width:900px;
+margin:auto;
 }
 
-.section h2{
-border-left:4px solid orange;
-padding-left:10px;
+h2{
+border-bottom:2px solid #333;
+padding-bottom:10px;
 }
 
-/* PRODUCTOS */
-
-.product{
+.menu-item{
 background:#111;
 margin:10px 0;
-border-radius:10px;
-overflow:hidden;
+border-radius:8px;
 cursor:pointer;
-transition:0.3s;
-}
-
-.product:hover{
-background:#1a1a1a;
-}
-
-.product-title{
 padding:15px;
+}
+
+.menu-item:hover{
+background:#1b1b1b;
+}
+
+.title{
 display:flex;
 justify-content:space-between;
-align-items:center;
 }
 
-.product-title i{
-color:orange;
-}
-
-.product-desc{
+.desc{
 display:none;
-padding:15px;
-border-top:1px solid #333;
-font-size:14px;
-}
-
-/* BOTON WHATSAPP */
-
-.whatsapp{
-display:inline-block;
 margin-top:10px;
-background:#25D366;
-color:white;
-padding:8px 15px;
-border-radius:5px;
-text-decoration:none;
-font-size:14px;
+color:#ccc;
 }
 
-/* RESPONSIVE */
-
-@media(max-width:600px){
-
-.menu-nav{
-overflow-x:auto;
-}
-
+.price{
+color:#00ff9c;
+font-weight:bold;
 }
 
 </style>
@@ -127,160 +87,151 @@ overflow-x:auto;
 
 <body>
 
-<!-- LOGO -->
+<header>
+<img src="LOGO.PNG">
+</header>
 
-<div class="logo">
-<img src="logo.png">
+<nav>
+
+<a href="#micheladas">🍹 Micheladas</a>
+<a href="#bebidas">🍺 Bebidas</a>
+<a href="#granizados">❄ Granizados</a>
+<a href="#peceras">🐟 Peceras</a>
+<a href="#mojitos">🍃 Mojitos</a>
+<a href="#cocteles">🍸 Cócteles</a>
+<a href="#sodas">🥤 Sodas</a>
+<a href="#limonadas">🍋 Limonadas</a>
+<a href="#jugos">🧃 Jugos</a>
+<a href="#shots">🥃 Shots</a>
+<a href="#antojitos">🍍 Antojos</a>
+<a href="#hamburguesas">🍔 Hamburguesas</a>
+<a href="#perros">🌭 Perros</a>
+<a href="#papas">🍟 Papas Torous</a>
+<a href="#mazorcadas">🌽 Mazorcadas</a>
+<a href="#parrilla">🥩 Parrilla</a>
+<a href="#picadas">🥓 Picadas</a>
+<a href="#burritos">🌯 Burritos</a>
+
+</nav>
+
+<section id="micheladas">
+
+<h2>🍹 Micheladas</h2>
+
+<div class="menu-item">
+<div class="title">
+<span>La bandida frutos rojos</span>
+<span class="price">$8.500</span>
 </div>
-
-<!-- MENU FLOTANTE -->
-
-<div class="menu-nav">
-
-<a href="#hamburguesas"><i class="fa-solid fa-burger"></i> Hamburguesas</a>
-
-<a href="#perros"><i class="fa-solid fa-hotdog"></i> Perros</a>
-
-<a href="#micheladas"><i class="fa-solid fa-beer-mug-empty"></i> Micheladas</a>
-
-<a href="#bebidas"><i class="fa-solid fa-glass-water"></i> Bebidas</a>
-
-</div>
-
-<!-- HAMBURGUESAS -->
-
-<div class="section" id="hamburguesas">
-
-<h2>🍔 Hamburguesas</h2>
-
-<div class="product" onclick="toggle(this)">
-<div class="product-title">
-Clásica
-<i class="fa-solid fa-chevron-down"></i>
-</div>
-
-<div class="product-desc">
-
-Pan brioche, carne artesanal, queso, lechuga, tomate y salsas.
-
-<a class="whatsapp" href="https://wa.me/573000000000?text=Quiero%20la%20hamburguesa%20clasica">
-Pedir por WhatsApp
-</a>
-
+<div class="desc">
+Manzana roja, fresa, uva, cereza, mermelada frutos rojos, dulces y gomitas
 </div>
 </div>
 
-
-<div class="product" onclick="toggle(this)">
-<div class="product-title">
-Doble Carne
-<i class="fa-solid fa-chevron-down"></i>
+<div class="menu-item">
+<div class="title">
+<span>La suegra frutos verdes</span>
+<span class="price">$8.500</span>
 </div>
-
-<div class="product-desc">
-
-Doble carne, doble queso, tocineta, lechuga y salsa especial.
-
-<a class="whatsapp" href="https://wa.me/573000000000?text=Quiero%20la%20hamburguesa%20doble">
-Pedir por WhatsApp
-</a>
-
+<div class="desc">
+Mango, manzana verde, kiwi, dulces y gomitas
 </div>
 </div>
 
+<div class="menu-item">
+<div class="title">
+<span>La golosa frutos amarillos</span>
+<span class="price">$8.500</span>
 </div>
-
-
-<!-- PERROS -->
-
-<div class="section" id="perros">
-
-<h2>🌭 Perros Calientes</h2>
-
-<div class="product" onclick="toggle(this)">
-<div class="product-title">
-Perro Sencillo
-<i class="fa-solid fa-chevron-down"></i>
-</div>
-
-<div class="product-desc">
-
-Salchicha americana, papita, queso y salsas.
-
-<a class="whatsapp" href="#">
-Pedir por WhatsApp
-</a>
-
+<div class="desc">
+Mango, piña, mermelada de maracuyá, dulces y gomitas
 </div>
 </div>
 
+<div class="menu-item">
+<div class="title">
+<span>La tamarindo</span>
+<span class="price">$10.000</span>
 </div>
-
-
-<!-- MICHELADAS -->
-
-<div class="section" id="micheladas">
-
-<h2>🍺 Micheladas</h2>
-
-<div class="product" onclick="toggle(this)">
-<div class="product-title">
-Michelada Clásica
-<i class="fa-solid fa-chevron-down"></i>
-</div>
-
-<div class="product-desc">
-
-Cerveza, limón, sal y salsas especiales.
-
-<a class="whatsapp" href="#">
-Pedir por WhatsApp
-</a>
-
+<div class="desc">
+Mango, banderilla de tamarindo, chamoy y Tajín. Toppings de tamarindo
 </div>
 </div>
 
+<div class="menu-item">
+<div class="title">
+<span>La mexicana</span>
+<span class="price">$10.000</span>
 </div>
-
-
-<!-- BEBIDAS -->
-
-<div class="section" id="bebidas">
-
-<h2>🥤 Bebidas</h2>
-
-<div class="product" onclick="toggle(this)">
-<div class="product-title">
-Gaseosas
-<i class="fa-solid fa-chevron-down"></i>
-</div>
-
-<div class="product-desc">
-
-Coca Cola, Colombiana, Sprite.
-
-<a class="whatsapp" href="#">
-Pedir por WhatsApp
-</a>
-
+<div class="desc">
+Mango, piña, Doritos picantes, chamoy y Tajín. Toppings picantes
 </div>
 </div>
 
+<div class="menu-item">
+<div class="title">
+<span>La blue berry</span>
+<span class="price">$9.500</span>
+</div>
+<div class="desc">
+Ármala con tres frutas de tu preferencia. Toppings dulces y gomitas
+</div>
 </div>
 
+<div class="menu-item">
+<div class="title">
+<span>La choclito</span>
+<span class="price">$9.500</span>
+</div>
+<div class="desc">
+Mango, choclitos, kipitos. Toppings dulces y gomitas
+</div>
+</div>
+
+<div class="menu-item">
+<div class="title">
+<span>La manco mamón</span>
+<span class="price">Consultar</span>
+</div>
+<div class="desc">
+Mango, mamoncillo, limón y sal. Toppings dulces y gomitas
+</div>
+</div>
+
+<div class="menu-item">
+<div class="title">
+<span>La creída</span>
+<span class="price">$8.500</span>
+</div>
+<div class="desc">
+Solo mango. Toppings dulces y gomitas
+</div>
+</div>
+
+<div class="menu-item">
+<div class="title">
+<span>La clásica</span>
+<span class="price">$5.500</span>
+</div>
+<div class="desc">
+Sal, limón y hielo
+</div>
+</div>
+
+</section>
 
 <script>
 
-function toggle(element){
+document.querySelectorAll(".menu-item").forEach(item=>{
+item.addEventListener("click",()=>{
+let desc=item.querySelector(".desc");
 
-let desc = element.querySelector(".product-desc");
-
-desc.style.display =
-desc.style.display === "block"
-? "none"
-: "block";
-
+if(desc){
+desc.style.display=
+desc.style.display==="block"?"none":"block";
 }
+});
+});
 
 </script>
 
