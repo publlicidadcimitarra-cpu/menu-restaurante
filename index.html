@@ -1,99 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Menú</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 <style>
 
 body{
 margin:0;
-font-family:Arial;
+padding:0;
 background:#000;
-color:white;
+font-family:Arial;
+overflow:hidden;
 }
 
-header{
-text-align:center;
-padding:30px;
-}
+/* CONTENEDOR PRINCIPAL */
 
-header img{
-width:220px;
-}
-
-nav{
-position:sticky;
-top:0;
-background:#111;
-padding:12px;
-overflow-x:auto;
-white-space:nowrap;
-z-index:1000;
-box-shadow:0 3px 10px rgba(0,0,0,0.5);
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin:12px;
-font-size:14px;
-}
-
-section{
-padding:25px;
-max-width:900px;
-margin:auto;
-}
-
-h2{
-border-bottom:2px solid #333;
-padding-bottom:10px;
-margin-top:40px;
-}
-
-.menu-item{
-background:#111;
-margin:12px 0;
-border-radius:10px;
-cursor:pointer;
-padding:16px;
-transition:0.2s;
-}
-
-.menu-item:hover{
-background:#1b1b1b;
-}
-
-.title{
+.menu-libro{
 display:flex;
-justify-content:space-between;
-font-size:16px;
+overflow-x:scroll;
+scroll-snap-type:x mandatory;
+width:100vw;
+height:100vh;
 }
 
-.desc{
+/* OCULTAR SCROLL */
+
+.menu-libro::-webkit-scrollbar{
 display:none;
-margin-top:10px;
-color:#ccc;
-font-size:14px;
 }
 
-.price{
-color:#00ff9c;
-font-weight:bold;
+/* PAGINAS */
+
+.pagina{
+flex:0 0 100%;
+width:100vw;
+height:100vh;
+scroll-snap-align:start;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#000;
 }
 
-footer{
-text-align:center;
-padding:40px;
-color:#666;
-font-size:12px;
+/* IMAGEN */
+
+.pagina img{
+width:100%;
+height:100%;
+object-fit:contain;
 }
 
 </style>
@@ -101,198 +58,44 @@ font-size:12px;
 
 <body>
 
-<header>
+<div class="menu-libro">
+
+<!-- LOGO -->
+<div class="pagina">
 <img src="logo.png">
-</header>
-
-<nav>
-
-<a href="#micheladas">🍹 Micheladas</a>
-<a href="#bebidas">🍺 Bebidas</a>
-<a href="#granizados">❄ Granizados</a>
-<a href="#peceras">🐟 Peceras</a>
-<a href="#mojitos">🍃 Mojitos</a>
-<a href="#cocteles">🍸 Cócteles</a>
-<a href="#sodas">🥤 Sodas</a>
-<a href="#limonadas">🍋 Limonadas</a>
-<a href="#jugos">🧃 Jugos</a>
-<a href="#shots">🥃 Shots</a>
-<a href="#antojitos">🍍 Antojitos</a>
-<a href="#hamburguesas">🍔 Hamburguesas</a>
-<a href="#perros">🌭 Perros</a>
-<a href="#papas">🍟 Papas Torous</a>
-<a href="#mazorcadas">🌽 Mazorcadas</a>
-<a href="#parrilla">🥩 Parrilla</a>
-<a href="#picadas">🥓 Picadas</a>
-<a href="#burritos">🌯 Burritos</a>
-
-</nav>
-
-
-<!-- MICHELADAS -->
-
-<section id="micheladas">
-
-<h2>🍹 Micheladas</h2>
-
-<div class="menu-item">
-<div class="title">
-<span>La bandida frutos rojos</span>
-<span class="price">$8.500</span>
-</div>
-<div class="desc">
-Manzana roja, fresa, uva, cereza, mermelada frutos rojos, dulces y gomitas
-</div>
 </div>
 
-<div class="menu-item">
-<div class="title">
-<span>La suegra frutos verdes</span>
-<span class="price">$8.500</span>
-</div>
-<div class="desc">
-Mango, manzana verde, kiwi, dulces y gomitas
-</div>
-</div>
+<!-- PAGINAS MENU -->
 
-<div class="menu-item">
-<div class="title">
-<span>La golosa frutos amarillos</span>
-<span class="price">$8.500</span>
-</div>
-<div class="desc">
-Mango, piña, mermelada de maracuyá, dulces y gomitas
-</div>
-</div>
+<div class="pagina"><img src="1.jpg"></div>
+<div class="pagina"><img src="2.jpg"></div>
+<div class="pagina"><img src="3.jpg"></div>
+<div class="pagina"><img src="4.jpg"></div>
+<div class="pagina"><img src="5.jpg"></div>
+<div class="pagina"><img src="6.jpg"></div>
+<div class="pagina"><img src="7.jpg"></div>
+<div class="pagina"><img src="8.jpg"></div>
+<div class="pagina"><img src="9.jpg"></div>
+<div class="pagina"><img src="10.jpg"></div>
+<div class="pagina"><img src="11.jpg"></div>
+<div class="pagina"><img src="12.jpg"></div>
+<div class="pagina"><img src="13.jpg"></div>
+<div class="pagina"><img src="14.jpg"></div>
+<div class="pagina"><img src="15.jpg"></div>
+<div class="pagina"><img src="16.jpg"></div>
+<div class="pagina"><img src="17.jpg"></div>
+<div class="pagina"><img src="18.jpg"></div>
+<div class="pagina"><img src="19.jpg"></div>
+<div class="pagina"><img src="20.jpg"></div>
+<div class="pagina"><img src="21.jpg"></div>
+<div class="pagina"><img src="22.jpg"></div>
+<div class="pagina"><img src="23.jpg"></div>
+<div class="pagina"><img src="24.jpg"></div>
+<div class="pagina"><img src="25.jpg"></div>
+<div class="pagina"><img src="26.jpg"></div>
+<div class="pagina"><img src="27.jpg"></div>
 
-<div class="menu-item">
-<div class="title">
-<span>La tamarindo</span>
-<span class="price">$10.000</span>
 </div>
-<div class="desc">
-Mango, banderilla de tamarindo, chamoy y Tajín. Toppings de tamarindo
-</div>
-</div>
-
-<div class="menu-item">
-<div class="title">
-<span>La mexicana</span>
-<span class="price">$10.000</span>
-</div>
-<div class="desc">
-Mango, piña, Doritos picantes, chamoy y Tajín. Toppings picantes
-</div>
-</div>
-
-<div class="menu-item">
-<div class="title">
-<span>La blue berry</span>
-<span class="price">$9.500</span>
-</div>
-<div class="desc">
-Ármala con tres frutas de tu preferencia. Toppings dulces y gomitas
-</div>
-</div>
-
-<div class="menu-item">
-<div class="title">
-<span>La choclito</span>
-<span class="price">$9.500</span>
-</div>
-<div class="desc">
-Mango, choclitos, kipitos. Toppings dulces y gomitas
-</div>
-</div>
-
-<div class="menu-item">
-<div class="title">
-<span>La manco mamón</span>
-<span class="price">Consultar</span>
-</div>
-<div class="desc">
-Mango, mamoncillo, limón y sal. Toppings dulces y gomitas
-</div>
-</div>
-
-<div class="menu-item">
-<div class="title">
-<span>La creída</span>
-<span class="price">$8.500</span>
-</div>
-<div class="desc">
-Solo mango. Toppings dulces y gomitas
-</div>
-</div>
-
-<div class="menu-item">
-<div class="title">
-<span>La clásica</span>
-<span class="price">$5.500</span>
-</div>
-<div class="desc">
-Sal, limón y hielo
-</div>
-</div>
-
-</section>
-
-
-<!-- AQUI SIGUE TODO EL MENU DEL ARCHIVO -->
-
-<section id="hamburguesas">
-<h2>🍔 Hamburguesas</h2>
-
-<div class="menu-item">
-<div class="title">
-<span>Ternerita</span>
-<span class="price">$16.000</span>
-</div>
-<div class="desc">
-Pan, carne jugosa de res, queso mozzarella, cebolla caramelizada,
-vegetales frescos y papa francesa
-</div>
-</div>
-
-<div class="menu-item">
-<div class="title">
-<span>La cuernuda</span>
-<span class="price">$20.000</span>
-</div>
-<div class="desc">
-Pan, carne jugosa de res, pollo entartado, queso mozzarella,
-tocineta, cebolla caramelizada, vegetales frescos y papa francesa
-</div>
-</div>
-
-</section>
-
-
-<footer>
-Menú Digital
-</footer>
-
-
-<script>
-
-document.querySelectorAll(".menu-item").forEach(item=>{
-
-item.addEventListener("click",()=>{
-
-let desc=item.querySelector(".desc");
-
-if(desc){
-
-desc.style.display=
-desc.style.display==="block"?"none":"block";
-
-}
-
-});
-
-});
-
-</script>
 
 </body>
 </html>
